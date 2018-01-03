@@ -5,6 +5,7 @@ import createSagaMiddleware from 'redux-saga';
 
 import {handleFetch} from './saga';
 import {loadingReducer, dataReducer, offsetReducer} from './reducer';
+import GiphyGrid from './component/GiphyGrid';
 
 const App = () => {
 
@@ -37,7 +38,7 @@ const App = () => {
 
     return (
         <Provider store={store}>
-            <span>Giphy App</span>
+            <GiphyGrid/>
         </Provider>
     );
 };
