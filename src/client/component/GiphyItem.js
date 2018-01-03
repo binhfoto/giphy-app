@@ -10,7 +10,7 @@ function getRandomInt(min, max) {
 
 const GiphyItem = ({item: {user, images}}) => {
     return (
-        <div>
+        <div className="giphy-item">
             <div className="giphy-box">
                 <div className="giphy-preview" style={{backgroundImage: `url(${images.preview.url})`}}></div>
                 <div className="giphy-info">
