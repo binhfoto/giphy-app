@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img.giphy-preview {
+    height: 200px;
+    width: 200px;
+}
+
+.giphy-list {
+    max-width: 1024px;
+
+    background-color: #EEEEEE;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+.giphy-item {
+    margin-bottom: 20px;
+}
+
+
+.giphy-box {
+    min-width: 220px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 8px;
+}
+
+
+.giphy-preview {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.giphy-avatar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.giphy-avatar a {
+    text-decoration: none;
+}
+
+.giphy-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.giphy-icon-with-number {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    cursor: default;
+}
+
+.giphy-icon-with-number span {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .giphy-list {
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .giphy-list {
+        max-width: 640px;
+    }
+}
