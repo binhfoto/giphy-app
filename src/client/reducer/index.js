@@ -1,4 +1,7 @@
-import {FETCH_REQUEST, FETCH_SUCCESS, FETCH_FAILED} from '../action';
+import {
+    FETCH_REQUEST, FETCH_SUCCESS, FETCH_FAILED,
+    SHOW_DIALOG, HIDE_DIALOG
+} from '../action';
 
 export const loadingReducer = (state = true, action) => {
     switch (action.type) {
@@ -32,3 +35,15 @@ export const offsetReducer = (state = 0, action) => {
             return state;
     }
 };
+
+export const fullViewReducer = (state = null, action) => {
+    switch (action.type) {
+        case SHOW_DIALOG:
+            return action.originalUrl;
+        case HIDE_DIALOG:
+            return null;
+        default:
+            return state;
+    }
+};
+

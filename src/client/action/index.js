@@ -22,3 +22,15 @@ export const getGiphyFailed = (error) => {
         error
     };
 };
+
+export const SHOW_DIALOG = 'SHOW_DIALOG';
+export const HIDE_DIALOG = 'HIDE_DIALOG';
+
+export const showDialog = (originalUrl) => {
+    return {
+        type: SHOW_DIALOG,
+        originalUrl
+    }
+};
+
+export const hideDialog = () => ({type: HIDE_DIALOG});
