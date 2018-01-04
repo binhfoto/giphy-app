@@ -22,7 +22,7 @@ const GiphyFullView = ({originalUrl, hideDialog}) => {
         >
             <div className="giphy-fullview">
                 <img src={originalUrl}/>
-                <IconButton aria-label="Close" onClick={hideDialog}>
+                <IconButton aria-label="Close" onClick={hideDialog} className="giphy-fullview-close">
                     <CloseIcon />
                 </IconButton>
             </div>
