@@ -31,7 +31,8 @@ const GiphyFullView = ({originalUrl, hideDialog}) => {
 };
 
 GiphyFullView.propType = {
-    originalUrl: PropTypes.string
+    originalUrl: PropTypes.string,
+    hideDialog: PropTypes.func
 };
 
 export default connect(

@@ -15,9 +15,9 @@ const GiphyItem = ({item: {user, images}, showFullView}) => {
             <div className="giphy-box">
                 <div className="giphy-preview" style={{backgroundImage: `url(${images.preview.url})`}} onClick={onClick}></div>
                 <div className="giphy-info">
-                    <GiphyIconWithNumber icon_name="remove_red_eye" number={getRandomInt(500, 1000)}/>
-                    <GiphyIconWithNumber icon_name="comment"        number={getRandomInt(1, 50)}/>
-                    <GiphyIconWithNumber icon_name="favorite"       number={getRandomInt(1, 200)}/>
+                    <GiphyIconWithNumber iconName="remove_red_eye" number={getRandomInt(500, 1000)}/>
+                    <GiphyIconWithNumber iconName="comment"        number={getRandomInt(1, 50)}/>
+                    <GiphyIconWithNumber iconName="favorite"       number={getRandomInt(1, 200)}/>
                 </div>
 
             </div>

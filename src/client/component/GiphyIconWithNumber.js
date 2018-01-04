@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const GiphyIconWithNumber = ({icon_name, number}) => {
+const GiphyIconWithNumber = ({iconName, number}) => {
     return (
         <div className="giphy-icon-with-number">
-            <i className="material-icons md-dark md-18">{icon_name}</i>
+            <i className="material-icons md-dark md-18">{iconName}</i>
             <span >{number}</span>
         </div>
     );
 };
 
 GiphyIconWithNumber.propTypes = {
-    icon_name: PropTypes.string.isRequired,
+    iconName: PropTypes.string.isRequired,
     number: PropTypes.number.isRequired,
 };
 
