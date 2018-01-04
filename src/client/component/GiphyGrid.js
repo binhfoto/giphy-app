@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import {getGiphty, showDialog} from '../action';
@@ -40,6 +41,11 @@ class GiphyGrid extends PureComponent {
         );
     }
 }
+
+GiphyGrid.propTypes = {
+    data: PropTypes.array.isRequired,
+    showFullView: PropTypes.func
+};
 
 export default connect(
     ({data}) => ({data}),

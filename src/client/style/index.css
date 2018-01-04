@@ -1,16 +1,34 @@
-body, .giphy-fullview {
+body,
+.giphy-fullview,
+.giphy-list,
+.giphy-avatar,
+.giphy-info,
+.giphy-icon-with-number {
     display: flex;
-    flex-direction: column;
+}
+
+.giphy-list,
+.giphy-avatar,
+.giphy-info,
+.giphy-icon-with-number {
+    flex-direction: row;
+}
+
+body,
+.giphy-fullview,
+.giphy-avatar,
+.giphy-icon-with-number {
     align-items: center;
+}
+
+body,
+.giphy-fullview {
+    flex-direction: column;
 }
 
 .giphy-list {
     max-width: 1024px;
-
     background-color: #EEEEEE;
-
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-around;
@@ -20,7 +38,6 @@ body, .giphy-fullview {
     margin-bottom: 10px;
 }
 
-
 .giphy-box {
     min-width: 210px;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
@@ -28,7 +45,6 @@ body, .giphy-fullview {
     background-color: #fff;
     padding: 8px;
 }
-
 
 .giphy-preview {
     min-height: 200px;
@@ -38,32 +54,25 @@ body, .giphy-fullview {
     background-position: center;
 }
 
-.giphy-avatar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 .giphy-avatar a {
     text-decoration: none;
 }
 
 .giphy-info {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-end;
 }
 
 .giphy-icon-with-number {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     margin-left: 10px;
     cursor: default;
 }
 
 .giphy-icon-with-number span {
     font-size: 12px;
+}
+
+.giphy-fullview .giphy-fullview-close {
+    margin: 5px 0;
 }
 
 @media screen and (min-width: 640px) and (max-width: 768px) {

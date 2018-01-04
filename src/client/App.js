@@ -9,13 +9,6 @@ import GiphyGrid from './component/GiphyGrid';
 
 const App = () => {
 
-    const initialState = {
-        data: [],
-        loading: true,
-        offset: 0,
-        originalUrl: null
-    };
-
     const rootReducer = combineReducers({
         data: dataReducer,
         loading: loadingReducer,
@@ -25,18 +18,9 @@ const App = () => {
 
     const sagaMiddleware = createSagaMiddleware();
 
-    const store = createStore(rootReducer, initialState, applyMiddleware(sagaMiddleware));
+    const store = createStore(rootReducer, {}, applyMiddleware(sagaMiddleware));
 
     sagaMiddleware.run(handleFetch);
-
-    /*store.dispatch({
-        type: 'FETCH_REQUEST',
-        offset: 0
-    });
-
-    store.subscribe(function () {
-        console.log(store.getState());
-    });*/
 
     return (
         <Provider store={store}>
