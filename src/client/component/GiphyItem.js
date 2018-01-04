@@ -8,11 +8,12 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const GiphyItem = ({item: {user, images}}) => {
+const GiphyItem = ({item: {user, images}, showFullView}) => {
+    let onClick = () => showFullView(images.original.url);
     return (
         <div className="giphy-item">
             <div className="giphy-box">
-                <div className="giphy-preview" style={{backgroundImage: `url(${images.preview.url})`}}></div>
+                <div className="giphy-preview" style={{backgroundImage: `url(${images.preview.url})`}} onClick={onClick}></div>
                 <div className="giphy-info">
                     <GiphyIconWithNumber icon_name="remove_red_eye" number={getRandomInt(500, 1000)}/>
                     <GiphyIconWithNumber icon_name="comment"        number={getRandomInt(1, 50)}/>
@@ -27,6 +28,7 @@ const GiphyItem = ({item: {user, images}}) => {
 
 GiphyItem.propTypes = {
     item: PropTypes.object.isRequired,
+    showFullView: PropTypes.func
 };
 
 export default GiphyItem;

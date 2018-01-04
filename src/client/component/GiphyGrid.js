@@ -1,8 +1,9 @@
 import React, {PureComponent} from 'react';
 import { connect } from 'react-redux';
 
-import {getGiphty} from '../action';
+import {getGiphty, showDialog} from '../action';
 import GiphyItem from './GiphyItem';
+import GiphyFullView from './GiphyFullView';
 import '../style/index.css';
 
 class GiphyGrid extends PureComponent {
@@ -30,9 +31,10 @@ class GiphyGrid extends PureComponent {
             <div className="giphy-list">
                 {
                     data.map((item) => {
-                        return <GiphyItem key={item.id} item={item}/>
+                        return <GiphyItem key={item.id} item={item} showFullView={this.props.showFullView}/>
                     })
                 }
+                <GiphyFullView/>
             </div>
 
         );
@@ -45,6 +47,9 @@ export default connect(
         return {
             getData: () => {
                 dispatch(getGiphty(0));
+            },
+            showFullView: (url) => {
+                dispatch(showDialog(url));
             }
         };
     }

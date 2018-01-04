@@ -4,7 +4,7 @@ import { combineReducers, createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 import {handleFetch} from './saga';
-import {loadingReducer, dataReducer, offsetReducer} from './reducer';
+import {loadingReducer, dataReducer, offsetReducer, fullViewReducer} from './reducer';
 import GiphyGrid from './component/GiphyGrid';
 
 const App = () => {
@@ -12,13 +12,15 @@ const App = () => {
     const initialState = {
         data: [],
         loading: true,
-        offset: 0
+        offset: 0,
+        originalUrl: null
     };
 
     const rootReducer = combineReducers({
         data: dataReducer,
         loading: loadingReducer,
-        offset: offsetReducer
+        offset: offsetReducer,
+        originalUrl: fullViewReducer
     });
 
     const sagaMiddleware = createSagaMiddleware();
