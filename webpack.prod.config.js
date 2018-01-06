@@ -14,11 +14,12 @@ const config = {
             main.js: bundle file for project source code
             vendor.js: bundle file for 3rd-lib/vendor source code
         */
-        filename: "[name].[chunkhash].js"
+        filename: "[name].[chunkhash].js",
         /*
         * main.50ff413ea6b74090d929.js
         * vendor.6d5d83247c075d13e153.js
         * */
+        publicPath: '/'
     },
 
     module: {

@@ -23,7 +23,9 @@ class GiphyGrid extends PureComponent {
                         url: data.images.fixed_width_still.url
                     },
                     original: {
-                        url: data.images.original.url
+                        url: data.images.original.url,
+                        width: data.images.original.width,
+                        height: data.images.original.height
                     }
                 }
             };
@@ -54,8 +56,8 @@ export default connect(
             getData: () => {
                 dispatch(getGiphty(0));
             },
-            showFullView: (url) => {
-                dispatch(showDialog(url));
+            showFullView: (fullView) => {
+                dispatch(showDialog(fullView));
             }
         };
     }

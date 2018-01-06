@@ -26,10 +26,10 @@ export const getGiphyFailed = (error) => {
 export const SHOW_DIALOG = 'SHOW_DIALOG';
 export const HIDE_DIALOG = 'HIDE_DIALOG';
 
-export const showDialog = (originalUrl) => {
+export const showDialog = (fullView) => {
     return {
         type: SHOW_DIALOG,
-        originalUrl
+        fullView
     }
 };
 
