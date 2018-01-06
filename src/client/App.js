@@ -13,7 +13,7 @@ const App = () => {
         data: dataReducer,
         loading: loadingReducer,
         offset: offsetReducer,
-        originalUrl: fullViewReducer
+        fullView: fullViewReducer
     });
 
     const sagaMiddleware = createSagaMiddleware();

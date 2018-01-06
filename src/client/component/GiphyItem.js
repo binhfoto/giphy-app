@@ -9,7 +9,7 @@ function getRandomInt(min, max) {
 }
 
 const GiphyItem = ({item: {user, images}, showFullView}) => {
-    let onClick = () => showFullView(images.original.url);
+    let onClick = () => showFullView(images.original);
     return (
         <div className="giphy-item">
             <div className="giphy-box">

@@ -36,12 +36,12 @@ export const offsetReducer = (state = 0, action) => {
     }
 };
 
-export const fullViewReducer = (state = null, action) => {
+export const fullViewReducer = (state = {}, action) => {
     switch (action.type) {
         case SHOW_DIALOG:
-            return action.originalUrl;
+            return action.fullView;
         case HIDE_DIALOG:
-            return null;
+            return {};
         default:
             return state;
     }
